@@ -1,0 +1,31 @@
+body {
+  background-image: url("https://cdn.lifehacker.ru/wp-content/uploads/2022/08/Bez-nazvaniya-1-kopiya_1661526404-1536x768.jpg"); 
+ 
+}
+
+h1 {
+  color:  #7021c7;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 2; 
+  font-weight: 800;  
+}
+
+.firstParagraf {
+  color: red;
+}
+
+.secondParagraf {
+  color: rgb(255, 0, 177);
+}
+
+.thirdParagraf {
+  color: hsl(22, 100%, 50%);
+}
+
+.fourthParagraf {
+  color: hsl(108, 100%, 50%, 0.8);
+}

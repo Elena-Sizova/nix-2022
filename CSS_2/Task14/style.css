@@ -1,0 +1,39 @@
+table {
+  width: 200px;
+  height: 200px;
+  border-collapse: collapse;
+  padding:10px;
+}
+
+td {
+  background-color:red;
+}
+
+td:first-child, .round {
+  background-color: blue;
+}
+
+.half_round {
+  border-radius: 0 50% 50% 0;
+}
+
+.round {
+  border-radius: 50% 50%;
+}
+
+.upper_corners{
+  border-radius: 50% 50% 0 0;
+}
+
+.lower_corners{
+  border-radius: 0 0 50% 50% ;
+}
+
+.left_lower_corner{
+  border-radius: 0 0 0 50% ;
+}
+
+.left_upper_corner {
+  border-radius: 50% 0 0 0 ;
+}
+
