@@ -1,0 +1,33 @@
+.first_col { 
+  float: left;
+  width: 20%;
+}
+
+.wrapper{
+  margin-left: 20%;
+}
+
+.last_col {
+  float: right;
+  width: 20%;
+}
+
+.wrapper2{
+  margin-right: 20%;
+}
+
+.fourth_col {
+  float: right;
+  width: 33%;
+}
+
+.second_col {
+  float: left;
+  width: 33%;
+}
+
+.third_col {
+  margin-left: 33%;
+  margin-right: 33%;
+}
+

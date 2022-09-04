@@ -1,0 +1,21 @@
+.first_row_right {
+  float: right; 
+  width:20%;
+  background-color: green;
+}
+
+.first_row_right + div {
+  margin-right: 20%; 
+  background-color: red;
+}
+
+.first_row_right + div + .second_row_left {
+  background-color: green;
+  float: left;
+  width: 20%;
+}
+
+.second_row_left + div {
+  margin-left: 20%;
+  background-color: red;
+}

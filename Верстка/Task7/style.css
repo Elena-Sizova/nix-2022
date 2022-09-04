@@ -1,0 +1,19 @@
+
+div {
+  border: 1px solid; 
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+div:first-child {
+  float: left;
+}
+
+div:nth-child(2){
+  float: left;
+} 
+
+div:last-child {
+  float: right;
+}

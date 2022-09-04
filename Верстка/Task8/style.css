@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+}
+
+div {
+  display: block;
+  color: #FFF;
+  height: 100px;
+  width: 100px;
+}
+
+div:first-child {
+  background-color: red;
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+div:nth-child(2) {
+  background-color: green;
+  position: relative;
+  top: -100px;
+ 
+}
+div:nth-child(3) {
+  background-color: blue;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+div:last-child{
+  background-color: black;
+  position: relative;
+  top: -100px;
+}

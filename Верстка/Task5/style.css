@@ -1,0 +1,24 @@
+div[class] {
+  margin-left: 20px;
+  display: list-item;
+  list-style-type: upper-alpha;
+}
+
+.first_block span:nth-child(2) {
+  display: block;
+}
+
+.second_block div:nth-child(2) {
+  display: inline;
+}
+
+.third_block span {
+  display: inline-block;
+}
+
+.third_block span:first-child, 
+.third_block span:last-child {
+  height: auto;
+  width: auto;
+}
+

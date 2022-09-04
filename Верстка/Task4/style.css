@@ -1,0 +1,19 @@
+div:only-of-type {
+  background-color: red;
+}
+
+ div div:nth-child(1){
+  float: left;  
+  width: 33%;
+}
+
+div div:nth-child(2) {
+  float: right;
+  width: 33%;
+}
+
+div div:nth-child(3) {
+  background-color: white;
+  margin-left: 33%;
+  margin-right: 33%;
+}
