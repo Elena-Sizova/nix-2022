@@ -9,7 +9,7 @@
   background-color: red;
 }
 
-.first_row_right + div + .second_row_left {
+.second_row_left {
   background-color: green;
   float: left;
   width: 20%;
