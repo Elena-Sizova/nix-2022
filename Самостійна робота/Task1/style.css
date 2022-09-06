@@ -1,15 +1,22 @@
 div {
   border: 1px solid;
   padding: 10px;
+  margin: 5px;
 }
 
 .container {
-  display: inline-flex;
- 
-
+  width: 500px;
+  height: 150px;
+  display: flex; 
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-div div {
+div:last-child {
+  order: -1;
+}
 
-  
+div:nth-child(2) {
+  order: 2;
 }

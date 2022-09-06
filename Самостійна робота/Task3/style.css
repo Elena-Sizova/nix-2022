@@ -1,0 +1,30 @@
+div {
+  border: 1px solid;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 500px;
+  height: 400px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.container div {
+  width: 20%;
+}
+
+.container div:nth-child(3) {
+  width: 100%;
+}
+
+.container div:nth-child(2),
+.container div:nth-child(4) {
+  align-self: center;
+}
+
+.container div:last-child {
+  align-self: flex-end;
+}
