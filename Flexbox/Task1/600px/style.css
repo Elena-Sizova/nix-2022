@@ -1,0 +1,24 @@
+.flex-container {
+  display: flex;
+  width: 600px;
+  box-sizing: content-box;
+
+}
+
+.flex-item {
+  box-sizing: content-box;
+  flex-basis: 101px;
+}
+
+.flex-item:nth-child(2) {
+  flex-shrink: 2;
+}
+
+.flex-item:nth-child(3) {
+  flex-grow: 2;
+}
+
+.flex-item:nth-child(4) {
+  flex-grow: 2;
+  flex-shrink: 2;
+}
