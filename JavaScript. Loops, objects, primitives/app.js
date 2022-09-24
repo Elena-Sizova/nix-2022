@@ -87,7 +87,7 @@
 //   console.log('Dot lies in IV quarter');
 // }
 
-//Task 7 
+//Task 7
 
 // let vertexX1 = 1;
 // let vertexY1 = 1;
@@ -160,7 +160,7 @@
 //   }
 // }
 
-//Task 14 
+//Task 14
 
 // let i = 0;
 // while (i < 3) {
@@ -208,3 +208,99 @@
 //   square = number ** 2;
 //   console.log(square);
 // }
+
+//Task 19
+// let firstNumber = +prompt("Enter first number:");
+// let secondNumber = +prompt("Enter second number:");
+// let thirdNumber = +prompt("Enter third number:");
+// let maxNumber;
+// let minNumber;
+// let difference;
+
+// maxNumber = Math.max(firstNumber, secondNumber, thirdNumber);
+// minNumber = Math.min(firstNumber, secondNumber, thirdNumber);
+// difference = maxNumber - minNumber;
+// console.log(`The difference between ${maxNumber} and ${minNumber} is ${difference}`);
+
+//Task 20
+// let number = +prompt("Enter a number:");
+// if (!isNaN(number)) {
+//   let doubleNumber = number % 2 ? false : true;
+//   if (doubleNumber) {
+//     console.log(`The number ${number} is a double number`);
+//   } else {
+//     console.log(`The number ${number} isn't a double number`);
+//   }
+// }
+
+//Task 21
+// let a = 44;
+// let quantity = a / 10 > 1 ? 2 : 1;
+// let sum = Math.trunc(a / 10) + a % 10;
+
+// console.log(`The quantity of symbols in number ${a} = ${quantity}, the sum of numbers = ${sum}`);
+
+//Task 22
+// let measure = prompt("Введіть в яку одиницю виміру ви хочете конвертувати(якщо в см - введіть \"см\", якщо в дюйми - введіть \"дюйм\"):");
+// let number = +prompt("Введіть значення, що перевести");
+// let value;
+
+// switch (measure) {
+//   case 'см':
+//     value = (number / 2.54).toFixed(2);
+//     console.log(`${number} дюймів в буде ${value} см`);
+//     break;
+//   case 'дюйм':
+//     value = (number * 2.54).toFixed(2);
+//     console.log(`${number} cм в буде ${value} дюймів`);
+//     break;
+// }
+
+//Task 23
+
+
+
+//Task 24
+// let number = +prompt("Введіть трицифрове число:");
+// let operation;
+// if (!isNaN(number)) {
+//   let firstSymbol = Math.trunc(number / 100);
+//   let secondSymbol = Math.trunc((number - firstSymbol * 100) / 10);
+//   let thirdSymbol = number % 10;
+//   let doubleNumber = number % 2 ? false : true;
+//   if (doubleNumber) {
+//     operation = firstSymbol + secondSymbol + thirdSymbol;
+//     console.log(`Число ${number} парне. Сума його цифр = ${operation}`);
+//   } else {
+//     operation = firstSymbol * secondSymbol * thirdSymbol;
+//     console.log(`Число ${number} не парне. Добуток його цифр = ${operation}`);
+//   }
+// }
+
+//Task 25
+
+// let a = +prompt("Введіть довжину першої сторони трикутника:");
+// let b = +prompt("Введіть довжину другої сторони трикутника:");
+// let c = +prompt("Введіть довжину третьої сторони трикутника:");
+// if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+//   if (a > 0 && b > 0 && c > 0) {
+//     if (a + b > c && a + c > b && b + c > a) {
+//       console.log(`Трикутник зi сторонами ${a}, ${b}, ${c} існує`);
+//     } else {
+//       console.log(`Трикутник зi сторонами ${a}, ${b}, ${c} не існує`);
+//     }
+//   }
+// }
+
+//Task 26
+
+// let AX = 4;
+// let AY = 9;
+// let R = 10;
+
+// if (Math.pow(AX, 2) + Math.pow(AY, 2) <= Math.pow(R, 2)) {
+//   console.log(`Точка з координатами (${AX};${AY}) лежить в середині кола з радіусом = ${R}`);
+// } else {
+//   console.log(`Точка з координатами (${AX};${AY}) лежить за межами кола з радіусом = ${R}`);
+// }
+
