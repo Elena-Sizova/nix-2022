@@ -257,7 +257,49 @@
 // }
 
 //Task 23
+// let play = true;
+// alert('Вас вітає гра \'Як стати мільйонером!\'. Перед тимб як почнемо грати, ознайомтеся з правилами: на вас чекає 15 запитань - 15 кроків на шляху до мільйона. Чотири варіанти відповіді на кожне питання. Треба вписати літеру, що відповідає правельній відповіді в поле під питанням. Починаємо!');
 
+// let answer = prompt('Перше питання - 100грн.\n З якою частиною взуття порівнюють деяких чоловиків?\n A: Каблук B: Підошва С: Шнурок D:Устілка');
+
+// if (answer !== null) {
+//   if (answer.toUpperCase() === 'A') {
+//     play = confirm('Вітаю! Ви виграли 100грн.Переходимо до наступного питання?');
+//     console.log(play);
+//   } else {
+//     alert('Нажаль відповідь не вірна!');
+//     play = false;
+//   }
+// } else {
+//   play = false;
+// }
+// if (play) {
+//   answer = prompt('Друге питання - 500грн. Який вид спорту не входить в програму Олимпійських ігор?\n A: Футбол B: Волейбол С: Гандбол D: Літрбол');
+//   if (answer !== null) {
+//     if (answer.toUpperCase() === 'D') {
+//       play = confirm('Вітаю! Ви виграли 500грн. Переходимо до наступного питання?');
+//     } else {
+//       alert('Нажаль відповідь не вірна!');
+//       play = false;
+//     }
+//   } else {
+//     play = false;
+//   }
+// }
+// if (play) {
+//   answer = prompt('Третє питання - 1000грн. З якою твариною зазвичай порівнюють поганого водія?\n A: Гепард B: Лев С: Олень D: Єнот');
+//   if (answer !== null) {
+//     if (answer.toUpperCase() === 'C') {
+//       play = confirm('Вітаю! Ви виграли 1000грн.Переходимо до наступного питання?');
+//     } else {
+//       alert('Нажаль відповідь не вірна!');
+//       play = false;
+//     }
+//   } else {
+//     play = false;
+//   }
+// }
+// if (!play) alert('Ви залишаєте гру.');
 
 
 //Task 24
@@ -304,3 +346,53 @@
 //   console.log(`Точка з координатами (${AX};${AY}) лежить за межами кола з радіусом = ${R}`);
 // }
 
+//Task 27
+// let user = {};
+// user.name = 'John';
+// user.surname = 'Smith';
+// user.name = 'Pete';
+// delete user.name;
+
+// console.log(user);
+
+//Task 28
+// const user = {
+//   name: "John"
+// };
+// user.name = "Pete";
+// //працюватиме, змінювати поля об'єкта можна, а перевизначити об'єкт - ні
+// console.log(user);
+
+//Task 29
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130
+// }
+// let sum = 0;
+// for (let key in salaries) {
+//   sum += salaries[key];
+// }
+
+// console.log(sum);
+
+//Task 30
+
+// function multiplyNumeric(obj) {
+//   for (let key in obj) {
+//     if (typeof obj[key] === 'number') {
+//       obj[key] *= 2;
+//     }
+//   }
+// }
+
+// let employeeSalaryInfo = {
+//   John: 100,
+//   Ann: 160,
+//   val: 'dollar',
+//   Pete: 130,
+//   bank: 'aval',
+// }
+
+// multiplyNumeric(employeeSalaryInfo);
+// console.log(employeeSalaryInfo);
