@@ -1,0 +1,305 @@
+<!--Task 1 -->
+<!--<html>
+  <body>
+    <div>Користувачі:</div>
+    <ul>
+      <li>Джон</li>
+      <li>Піт</li>
+    </ul>
+    <script>
+      console.log(document.body.firstElementChild);//div
+      console.log(document.body.firstElementChild.nextElementSibling);//ul
+      console.log(document.body.firstElementChild.nextElementSibling.lastElementChild);//другий li
+    </script>
+  </body>
+</html>-->
+
+<!--Task 2. Сусіди
+Якщо elem – довільний вузол DOM-елемента.
+• Правда, що elem.lastChild.nextSibling завжди дорівнює null ? //Так, бо .lastChild повертає останній елементб у нього немає наступного
+• Правда, що elem.children[0].previousSibling завжди дорівнює null // Ні, бо elem.children[0] - це дочірній елемент з колекції елементів, але ще можуть бути текстові вузли, котрі не входять в ту колекцію-->
+
+<!--Task3-->
+<!-- <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      width: 250px;
+      height: 150px;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    table td {
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <script>
+    for (let row of document.body.firstElementChild.rows) {
+      for (let cell of row.cells) {
+        cell.innerHTML = `${row.rowIndex + 1}:${cell.cellIndex + 1}`;
+        if (row.rowIndex === cell.cellIndex) cell.style.background = "red";
+      }
+    }
+  </script>
+</body>
+</html> -->
+
+
+<!--Task 3-->
+<!-- <html>
+<body>
+ <form name="search">
+ <label>Search the site:
+ <input type="text" name="search">
+ </label>
+ <input type="submit" value="Search!">
+ </form>
+ <hr>
+ <form name="search-person">
+ Search the visitors:
+ <table id="age-table">
+ <tr>
+ <td>Age:</td>
+ <td id="age-list">
+ <label>
+ <input type="radio" name="age" value="young">less than 
+18</label>
+ <label>
+ <input type="radio" name="age" value="mature">18-50</label>
+ <label>
+ <input type="radio" name="age" value="senior">more than 
+50</label>
+ </td>
+ </tr>
+ <tr>
+ <td>Additionally:</td>
+ <td>
+ <input type="text" name="info[0]">
+ <input type="text" name="info[1]">
+ <input type="text" name="info[2]">
+ </td>
+ </tr>
+ </table>
+ <input type="submit" value="Search!">
+ </form>
+
+ <script>
+  //Ось документ із таблицею та формою. Як знайти
+  //  Таблицю з id="age-table".
+  console.log(document.getElementById('age-table'));
+  //  Всі елементи label всередині цієї таблиці (їх три).
+  console.log(document.querySelectorAll('#age-table label'));
+  //  Перший td у цій таблиці (зі словом "Age ").
+  console.log(document.getElementById('age-table').rows[0].cells[0]);
+  //  Форму form з ім'ям name = "search".
+  console.log(document.querySelector('form[name = "search"]'));
+  //  Перший input у цій формі.
+  console.log(document.querySelector('form[name = "search"]').querySelector('input'));
+  //  Останній input у цій формі
+  let searchInput = document.querySelector('form[name = "search"]').querySelectorAll('input');
+  console.log(searchInput[searchInput.length - 1]);
+ </script>
+</body>
+</html> -->
+
+
+<!--Task 4 
+  Є дерево, структуроване як вкладені списки ul/li.
+Напишіть код, який виведе кожен елемент списку <li>:
+1. Який у ньому текст (без піддерева)?
+2. Яка кількість нащадків – всіх вкладених (включаючи глибоко вкладені) -->
+<!--<html>
+<body>
+
+  <ul>
+    <li>Продукти
+      <ul>
+        <li>Морозильна камера
+          <ul>
+            <li>Свинина</li>
+            <li>Курка</li>
+            <li>Пельмені</li>
+          </ul>
+        </li>
+        <li>Холодильна камера
+          <ul>
+            <li>Сир</li>
+            <li>Ковбаса</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Господарчі речі
+      <ul>
+        <li>Прибирання
+          <ul>
+            <li>Гумові рукавички</li>
+          </ul>
+        </li>
+        <li>Прання
+          <ul>
+            <li>Пральний попрошок</li>
+            <li>Кондиціонер</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <script>
+    for(elem of document.body.querySelectorAll('li')) {
+      let name = elem.firstChild.data;
+      let quantity = elem.querySelectorAll('li').length;
+      console.log(`${name}:${quantity}`);
+    }
+  </script>
+
+</body>
+</html> -->
+
+
+<!--Task 5-->
+<!--<html>
+<body>
+ <script>
+ alert(document.body.lastChild.nodeType);//1, на момент виконання останнім вузлом DOM буде script, тому виведе 1
+ </script>
+</body>
+</html> -->
+
+<!--Task 6 -->
+<!-- <html>
+<body>-->
+<script>
+  // let body = document.body;
+  // body.innerHTML = "<!--" + body.tagName + "-->";
+  // alert( body.firstChild.data ); //BODY,так як tagName повертає назву тега елемента в верхньому регістрі
+ </script>
+ <!-- </body>
+ </html> -->
+
+ <!--Task 7-->
+ <!--Дайте відповіді на запитання:
+1. Об'єктом якого класу є document? //HTMLDocument
+2. Яке місце він посідає у DOM-ієрархії? //-->
+<!-- <html>
+<body>
+<script>
+console.log(HTMLDocument.prototype.constructor.name); // HTMLDocument
+console.log(HTMLDocument.prototype.__proto__.constructor.name); // Document
+console.log(HTMLDocument.prototype.__proto__.__proto__.constructor.name); // Node
+</script>
+</body>
+</html> -->
+<!-- 3. Чи успадковує він від Node чи від Element, чи може від HTMLElement? //від Node -->
+
+<!--Task 8-->
+<!--<html>
+<body>
+<ol id="elem">
+  <li>Привет</li>
+  <li>Мир</li>
+ </ol>
+ <script>
+  function clear(elem) { 
+    elem.innerHTML = '';
+ }
+  clear(elem); // Очищає список
+ </script>
+ </body>
+ </html> -->
+
+ <!--Task 9 -->
+ <!--<html>
+  <body>
+  <table id="table">
+    aaa
+    <tr> <td>Тест</td> </tr>
+  </table>
+  <script>
+    alert(table); // таблиця, як і має бути
+    table.remove(); // Чому в документі залишився текст "ааа"?
+    //якщо поглянути в браузері на DOM документа, то aaa винесено за тег <table> тому при видаленні таблиці ааа не видалилося
+  </script>
+  </body>
+ </html> -->
+
+ <!--Task 10-->
+ <!-- <html>
+  <body>
+    <script>
+      let elemUl = document.createElement('ul');
+      document.body.append(elemUl);
+
+      while (true) {
+        let text = prompt("Введіть вміст для елемента списка", "");
+
+        if (!text) {
+          break;
+        }
+
+        let elemLi = document.createElement('li');
+        elemLi.textContent = text;
+        elemUl.append(elemLi);
+      }
+    </script>
+  </body>
+</html> -->
+
+<!--Task 11-->
+<!-- <html>
+  <body>
+    <ul id="ul">
+      <li id="one">1</li>
+      <li id="two">4</li>
+    </ul>
+    <script>
+      one.insertAdjacentHTML('afterend', '<li>2</li><li>3</li>');
+    </script>
+  </body>
+</html>  -->
