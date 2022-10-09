@@ -1,0 +1,16 @@
+.menu ul {
+  display: none;
+  list-style: none;
+}
+
+span::before {
+  content: '▶';
+}
+
+.menu.expand span::before {
+  content: '▼';
+}
+
+.menu.expand ul {
+  display: block;
+}

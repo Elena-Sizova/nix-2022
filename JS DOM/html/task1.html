@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div></div>
+  <script> 
+    function createCalendar(elem, year, month){
+      elem = new DocumentFragment();
+      let table = document.createElement('table');
+      table.style.border = '1px solid black';
+      table.style.borderCollapse = 'collapse';
+      table.style.textAlign = 'center';
+      let tr = document.createElement('tr');
+      tr.style.background = 'lightBlue';
+      let th;
+      
+      let td = document.createElement('td');
+      for(let i = 0; i < 7; i++) {
+        th = document.createElement('th');
+        th.style.border = '1px solid black';
+        th.style.padding = '2px';
+        switch(i){
+          case 0: 
+                th.textContent = 'пн'; 
+                break;
+          case 1: 
+                th.textContent = 'вт'; 
+                break;
+          case 2: 
+                th.textContent = 'ср'; 
+                break;
+          case 3: 
+                th.textContent = 'чт'; 
+                break;      
+          case 4: 
+                th.textContent = 'пт'; 
+                break;
+          case 5: 
+                th.textContent = 'сб'; 
+                break;
+          case 6: 
+                th.textContent = 'вс'; 
+                break;      
+        }    
+        tr.append(th);
+      }
+      table.append(tr);
+
+      let data = new Date(year, month-1);
+      let data2 = new Date(year, month);
+      let daysQuantity = Math.round((data2 - data)/1000/3600/24);
+      let firstDay = data.getDay();
+      if (firstDay === 0) firstDay = 7;
+      let daysForLoop = (daysQuantity + firstDay - 1)%7 === 0 ? (daysQuantity + firstDay - 1) : 7 - (daysQuantity + firstDay-1)%7 + daysQuantity + firstDay - 1; 
+
+      for(let i = 1; i <= daysForLoop; i++){
+        if(i === 1 || (i-1) % 7 === 0){
+          tr = document.createElement('tr');
+        }
+        td = document.createElement('td');
+        td.style.border = '1px solid black';
+        if(i >= firstDay && i < firstDay + daysQuantity){
+          td.textContent = i - firstDay + 1;
+        }
+
+        tr.append(td);
+        if(i % 7 === 0){
+          table.append(tr);
+        }
+      }
+      elem.append(table);
+      return elem;
+    }
+    let elem;
+    elem = createCalendar(elem, 2022, 7);
+    let d = document.querySelector('div');
+    d.append(elem);
+  </script>
+</body>
+</html>
