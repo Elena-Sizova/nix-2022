@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type = "text/CSS" href="style.css">
+  <title>Generator</title>
+</head>
+<body>
+  <form action="">
+    <div class="wrapper">
+      <div class="discription">
+        <h1>The random number generator</h1>
+      </div>
+      <div class="data">
+        <div>
+          <label for="min">Min</label>
+          <input id = "min" type="number" name = "min" value = "1">
+        </div>
+        <div>
+          <label for="max">Max</label>
+          <input id = "max" type="number" name = "max" value = "100">
+        </div>
+        <div>
+          <label for="amount">Number of digits</label>
+          <input id = "amount" type="number" name = "amount" value = "1">
+        </div>
+        <div>
+          <input id = "unique" type="checkbox" name = "unique">
+          <label for="unique">No repetitions</label>    
+        </div>
+      </div>
+      <button>Generate</button>
+      <div class = "result-wrapper">
+        <span class="result"></span>
+      </div>
+
+  </div>
+
+  </form>
+  <script src = "app.js"></script>
+</body>
+</html>

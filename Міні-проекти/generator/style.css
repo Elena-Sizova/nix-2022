@@ -1,0 +1,61 @@
+form {
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #b2b2f0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 300px;
+  box-shadow: 3px 4px 5px #585858;
+}
+
+.discription {
+  margin: 0;
+  padding: 7px;
+  background-color: #b2b2f0;
+}
+
+h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+  color: #181818
+}
+
+.data {
+  padding: 7px;
+}
+
+.data>div {
+  margin-bottom: 5px;
+}
+
+label {
+  color: #5a5a5a;
+}
+
+input[type="number"] {
+  width: 20%;
+}
+
+input:focus {
+  outline: none;
+}
+
+#min {
+  margin-left: 5px;
+}
+
+button {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.result-wrapper {
+  background-color: #b2b2f0;
+  padding: 7px;
+  display: none;
+}
+
+.result {
+  overflow-wrap: normal;
+}

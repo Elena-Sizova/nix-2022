@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #00050b;
+}
+
+#wrapper {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #00040d;
+}
+
+.high-section {
+  width: 100%;
+  display: flex;
+}
+
+.right-side {
+  width: 19%;
+}
+
+.container {
+  width: 60%;
+}
+
+.hints {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  left: 44%;
+}
+
+
+.picture {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.phone-call,
+.fifty-fifty {
+  width: 65px;
+  height: 45px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 0;
+  margin-left: 6px;
+  background: linear-gradient(#899bac, #1169a0);
+}
+
+.phone-call svg {
+  display: inline-block;
+  margin-top: 7px;
+  width: 30px;
+  height: 30px;
+  stroke: #f5d735;
+  fill: #f5d735;
+}
+
+.fifty-fifty span {
+  display: inline-block;
+  margin-top: 10px;
+  color: #f5d735;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.value {
+  width: 20%;
+  float: right;
+}
+
+.value ul {
+  list-style-type: none;
+  color: #f49729;
+  font-size: 1.2rem;
+}
+
+.value ul .guaranteed-income {
+  color: #fff;
+}
+
+.question {
+  width: 60%;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.question,
+.answer0,
+.answer1,
+.answer2,
+.answer3 {
+  background: linear-gradient(#024986, #000, #024986);
+  border: 2px solid #4b6379;
+  color: #fff;
+  padding: 3px;
+}
+
+.question span {
+  color: #fff;
+  font-size: 1.1rem;
+  overflow-wrap: normal;
+}
+
+.answers {
+  display: flex;
+  width: 60%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 3px auto;
+
+}
+
+.answer0,
+.answer1,
+.answer2,
+.answer3 {
+  width: 49%;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  padding-left: 7px;
+  padding-right: 3px;
+  margin-bottom: 3px;
+}
+
+.hoverOn:hover {
+  background: #f49729;
+}
+
+.selected {
+  background: #f49729;
+}
+
+.correct {
+  background: #21e05c;
+}
+
+.used {
+  filter: brightness(50%);
+}
+
+.wrong-answer {
+  text-decoration: line-through;
+}
+
+.current-price {
+  background-color: #f49729;
+  color: #fff;
+}
+
+.hints-hover:hover {
+  filter: brightness(130%);
+}
+
+.modal {
+  display: none;
+  width: 300px;
+  height: 200px;
+  position: fixed;
+  z-index: 3;
+  left: 40%;
+  top: 30%;
+  border: 2px solid #899bac;
+  background: #899bac;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f8f5f5;
+}
+
+.close {
+  color: #f8f5f5;
+  float: right;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.text {
+  display: inline-block;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
